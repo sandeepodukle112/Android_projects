@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rlMainActivity"
+    android:background="@color/color_background"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorAccent"
+        app:popupTheme="@android:style/Widget.Material.Light.PopupWindow">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="@dimen/d_10dp"
+                android:layout_height="@dimen/d_10dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="@dimen/d_15dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                style="@style/textViewStyleLarge"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/d_30dp"
+                android:gravity="center"
+                android:paddingRight="@dimen/d_40dp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_background"
+        android:orientation="vertical"
+        android:layout_below="@id/toolbar"
+        android:weightSum="2">
+
+        <FrameLayout
+            android:id="@+id/fl_main_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="top"
+            android:layout_weight="2">
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

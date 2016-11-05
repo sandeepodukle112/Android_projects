@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_160dp">
+        <!--
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/vpMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d_160dp"
+                    android:scaleType="fitXY" />
+        -->
+
+        <com.appworks.flow.Utility.NonSwapableViewPager
+            android:id="@+id/vpMain"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d_160dp"
+            android:scaleType="fitXY" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutPageIndicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/d_2dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:orientation="horizontal" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/d_15dp"
+        android:paddingRight="@dimen/d_15dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingTop="@dimen/d_10dp">
+
+        <GridView
+            android:id="@+id/gvMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_background"
+            android:clickable="false"
+            android:horizontalSpacing="@dimen/d_0dp"
+            android:numColumns="2"
+            android:scrollbars="none"
+            android:verticalSpacing="@dimen/d_0dp" />
+
+
+    </LinearLayout>
+</LinearLayout>
