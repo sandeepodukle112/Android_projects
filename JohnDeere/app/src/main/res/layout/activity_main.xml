@@ -39,23 +39,59 @@
 
     </android.support.v7.widget.Toolbar>
 
-    <LinearLayout
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/color_background"
-        android:orientation="vertical"
-        android:layout_below="@id/toolbar"
-        android:weightSum="2">
+        android:layout_below="@+id/toolbar">
 
-        <FrameLayout
-            android:id="@+id/fl_main_content"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_gravity="top"
-            android:layout_weight="2">
+            android:layout_height="match_parent"
+            android:background="@color/color_background"
+            android:orientation="vertical"
+            android:weightSum="2">
 
-        </FrameLayout>
+            <FrameLayout
+                android:id="@+id/fl_main_content"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="top"
+                android:layout_weight="2">
 
-    </LinearLayout>
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/d_250dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:background="@color/color_black_divider_navigation"
+            android:clickable="true"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <include
+                layout="@layout/nav_header_main"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.3" />
+
+            <ExpandableListView
+                android:id="@+id/expLvNavigation"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.7"
+                android:background="@color/color_black_divider_navigation"
+                android:childIndicator="@null"
+                android:divider="@color/color_black_divider_navigation"
+                android:dividerHeight="0.5dp"
+                android:groupIndicator="@null" />
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.DrawerLayout>
 
 </RelativeLayout>

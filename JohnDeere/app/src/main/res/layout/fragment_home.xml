@@ -8,16 +8,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/d_160dp">
-        <!--
 
-                <android.support.v4.view.ViewPager
-                    android:id="@+id/vpMain"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/d_160dp"
-                    android:scaleType="fitXY" />
-        -->
-
-        <com.appworks.flow.Utility.NonSwapableViewPager
+        <com.hp.johndeere.util.NonSwapableViewPager
             android:id="@+id/vpMain"
             android:layout_width="match_parent"
             android:layout_height="@dimen/d_160dp"
